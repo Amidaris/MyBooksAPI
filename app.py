@@ -27,7 +27,7 @@ def create_book():
         'id': books.all()[-1]['id'] + 1,
         'author': request.json['author'],
         'title': request.json['title'],
-        'genre': request.json.get('genre', 'Unknown'), # default is 'Unknown"
+        'genre': request.json.get('genre', 'Unknown'), # domyślna wartość to Unknown
         'available': True,
     }
     books.create(book)
